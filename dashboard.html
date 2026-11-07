@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+GrowthFlow Dashboard
+</title>
+
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="brand">
+
+
+<div class="logo-circle">
+↗
+</div>
+
+
+<h2>
+GrowthFlow
+</h2>
+
+
+</div>
+
+
+
+<nav>
+
+<a href="dashboard.html" class="active">
+🏠 Dashboard
+</a>
+
+<a href="leads.html">
+👥 Leads
+</a>
+
+<a href="pipeline.html">
+📊 Pipeline
+</a>
+
+<a href="followups.html">
+📅 Follow-ups
+</a>
+
+<a href="appointments.html">
+📅 Appointments
+</a>
+
+<a href="clients.html">
+🧑 Clients
+</a>
+
+<a href="settings.html">
+⚙ Settings
+</a>
+
+</nav>
+
+
+
+<button 
+class="btn btn-secondary"
+id="logoutBtn">
+
+Logout
+
+</button>
+
+
+</aside>
+
+
+
+
+
+<!-- MAIN AREA -->
+
+
+<main class="main">
+
+
+<header class="topbar">
+
+
+<div>
+
+<h1 id="greeting">
+Loading...
+</h1>
+
+
+<p id="businessName">
+Loading...
+</p>
+
+
+</div>
+
+
+
+<div class="profile" id="ownerName">
+
+Loading...
+
+</div>
+
+</header>
+
+
+
+
+
+<!-- STAT CARDS -->
+
+
+<section class="stats-grid">
+
+
+
+<div class="card stat-card">
+
+<span>
+Total Enquiries
+</span>
+
+<h2 id="totalLeads">
+0
+</h2>
+
+<p>
+This month
+</p>
+
+</div>
+
+
+
+
+
+<div class="card stat-card">
+
+<span>
+Converted Patients
+</span>
+
+<h2 id="convertedLeads">
+0
+</h2>
+
+<p>
+Total
+</p>
+
+</div>
+
+
+
+
+
+<div class="card stat-card">
+
+<span>
+Booked Leads
+</span>
+
+<h2 id="bookedLeads">
+0
+</h2>
+
+<p>
+Upcoming
+</p>
+
+</div>
+
+
+
+
+<div class="card stat-card">
+
+<span>
+Conversion Rate
+</span>
+
+<h2 id="conversionRate">
+0%
+</h2>
+
+<p>
+Average
+</p>
+
+</div>
+
+<div class="card stat-card">
+
+<span>
+📅 Follow-ups Today
+</span>
+
+<h2 id="todayFollowupsCount">
+0
+</h2>
+
+<p>
+Needs attention
+</p>
+
+</div>
+
+<div class="card stat-card">
+
+<span>
+📱 Top Lead Source
+</span>
+
+<h2 id="topLeadSource">
+-
+</h2>
+
+<p>
+Most enquiries
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="dashboard-grid">
+
+
+<div class="card">
+
+<h3>
+Recent Activity
+</h3>
+
+
+<div id="recentActivity">
+
+
+<p>
+Loading activity...
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h3>
+Quick Actions
+</h3>
+
+
+<div class="quick-actions">
+
+<button
+id="addLeadBtn"
+class="btn btn-primary">
+
+➕ Add Lead
+
+</button>
+
+
+<button
+id="pipelineBtn"
+class="btn btn-secondary">
+
+📊 Pipeline
+
+</button>
+
+
+<button
+id="followupsBtn"
+class="btn btn-secondary">
+
+📅 Follow-ups
+
+</button>
+
+
+<button
+id="viewLeadsBtn"
+class="btn btn-secondary">
+
+👥 View Leads
+
+</button>
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+</main>
+
+
+</div>
+
+
+<script type="module" src="js/dashboard.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+#searchClient{
+
+width:100%;
+
+padding:14px;
+
+margin-bottom:25px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+font-size:1rem;
+
+}
+
+.clients-table{
+
+width:100%;
+
+border-collapse:collapse;
+
+background:white;
+
+border-radius:15px;
+
+overflow:hidden;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.clients-table th{
+
+background:#2563eb;
+
+color:white;
+
+padding:16px;
+
+text-align:left;
+
+}
+
+.clients-table td{
+
+padding:15px;
+
+border-bottom:1px solid #eee;
+
+}
+
+.clients-table tr:hover{
+
+background:#f8fafc;
+
+}
+
+.clients-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:20px;
+
+}
+
+.clients-header h2{
+
+font-size:1.3rem;
+
+font-weight:700;
+
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+.clients-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+}
+
+.clients-table{
+
+    min-width:700px;
+
+}
+
+.main{
+
+    overflow-x:auto;
+
+}
+
+}

@@ -1,0 +1,237 @@
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.app{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.sidebar{
+
+    width:280px;
+
+    background:var(--sidebar);
+
+    color:white;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:30px;
+
+}
+
+/* ==========================
+   **/
+
+    
+
+
+/* ==========================
+   **/   
+.main{
+
+    margin-left:280px;
+
+    flex:1;
+
+    padding:35px;
+
+    background:var(--bg);
+
+}
+
+/* ==========================
+   TOPBAR
+========================== */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.page-title h1{
+
+    font-size:2rem;
+
+}
+
+.page-title p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================
+   CONTAINERS
+========================== */
+
+.container{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+/* ==========================
+   SIDEBAR NAVIGATION
+========================== */
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    margin-top:30px;
+
+}
+
+
+.sidebar nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:14px 16px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.sidebar nav a:hover{
+
+    background:rgba(255,255,255,0.1);
+
+}
+
+
+.sidebar nav a.active{
+
+    background:var(--primary);
+
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+
+/* APP */
+
+.app{
+
+    display:block;
+
+}
+
+
+
+/* SIDEBAR */
+
+.sidebar{
+
+    position:relative;
+
+    width:100%;
+
+    height:auto;
+
+    padding:20px;
+
+}
+
+
+/* NAV */
+
+.sidebar nav{
+
+    flex-direction:row;
+
+    overflow-x:auto;
+
+    gap:8px;
+
+}
+
+
+.sidebar nav a{
+
+    white-space:nowrap;
+
+}
+
+
+
+/* MAIN CONTENT */
+
+.main{
+
+    margin-left:0;
+
+    padding:20px;
+
+}
+
+
+
+/* TOPBAR */
+
+.topbar{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+
+.page-title h1{
+
+    font-size:1.6rem;
+
+}
+
+
+}

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+GrowthFlow | Leads
+</title>
+
+
+<link rel="stylesheet" href="css/variables.css">
+
+<link rel="stylesheet" href="css/reset.css">
+
+<link rel="stylesheet" href="css/components.css">
+
+<link rel="stylesheet" href="css/layout.css">
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet" href="css/leads.css">
+
+</head>
+
+
+
+<body>
+
+
+<div class="app">
+
+
+
+<aside class="sidebar">
+
+
+<div class="brand">
+
+<div class="logo-circle">
+↗
+</div>
+
+<h2>
+GrowthFlow
+</h2>
+
+</div>
+
+
+
+<nav>
+
+<a href="dashboard.html">
+🏠 Dashboard
+</a>
+
+<a href="leads.html" class="active">
+👥 Leads
+</a>
+
+<a href="pipeline.html">
+📊 Pipeline
+</a>
+
+<a href="followups.html">
+📅 Follow-ups
+</a>
+
+<a href="appointments.html">
+📅 Appointments
+</a>
+
+<a href="clients.html">
+🧑 Clients
+</a>
+
+<a href="settings.html">
+⚙ Settings
+</a>
+
+</nav>
+
+
+
+</aside>
+
+
+
+
+
+<main class="main">
+
+
+<div class="topbar">
+
+
+<div>
+
+<h1>
+Leads
+</h1>
+
+<p>
+Manage and convert enquiries into customers
+</p>
+
+</div>
+
+
+<button 
+class="btn btn-primary"
+id="addLeadBtn">
+
++ Add Lead
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>
+Name
+</th>
+
+<th>
+Service
+</th>
+
+<th>
+Source
+</th>
+
+<th>
+Status
+</th>
+
+<th>
+Actions
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="leadTable">
+
+
+</tbody>
+
+
+</table>
+
+
+
+</div>
+
+<div class="modal" id="leadModal">
+
+
+<div class="modal-content">
+
+
+<h2>
+Add New Lead
+</h2>
+
+
+
+<form id="leadForm">
+
+
+<div class="input-group">
+
+<label>
+Customer Name
+</label>
+
+<input 
+class="input"
+id="leadName"
+required>
+
+</div>
+
+
+
+<div class="input-group">
+
+<label>
+Phone Number
+</label>
+
+<input 
+class="input"
+id="leadPhone"
+required>
+
+</div>
+
+
+
+<div class="input-group">
+
+<label>
+Email
+</label>
+
+<input 
+class="input"
+id="leadEmail">
+
+</div>
+
+
+
+
+<div class="input-group">
+
+<label>
+Interested Service
+</label>
+
+
+<input 
+class="input"
+id="leadService"
+placeholder="Dental Cleaning">
+
+</div>
+
+
+
+
+<div class="input-group">
+
+<label>
+Lead Source
+</label>
+
+
+<select id="leadSource" class="input">
+
+
+<option value="Facebook">
+Facebook
+</option>
+
+
+<option value="TikTok">
+TikTok
+</option>
+
+
+<option value="WhatsApp">
+WhatsApp
+</option>
+
+
+<option value="Referral">
+Referral
+</option>
+
+
+<option value="Website">
+Website
+</option>
+
+
+</select>
+
+</div>
+
+<!-- Priority -->
+
+<div class="input-group">
+
+<label>
+Priority
+</label>
+
+
+<select id="leadPriority" class="input">
+
+<option value="Low">
+Low
+</option>
+
+
+<option value="Medium" selected>
+Medium
+</option>
+
+
+<option value="High">
+High
+</option>
+
+
+</select>
+
+</div>
+
+
+
+<!-- Follow Up Date -->
+
+<div class="input-group">
+
+<label>
+Follow-up Date
+</label>
+
+
+<input 
+type="date"
+id="followUpDate"
+class="input">
+
+
+</div>
+
+
+
+
+<!-- Notes -->
+
+<div class="input-group">
+
+<label>
+Notes
+</label>
+
+
+<textarea
+id="leadNotes"
+class="input"
+rows="4"
+placeholder="Add important information...">
+</textarea>
+
+
+</div>
+
+<div class="modal-buttons">
+
+<button 
+class="btn btn-primary">
+
+Save Lead
+
+</button>
+
+
+<button
+type="button"
+class="btn btn-secondary"
+id="cancelLead">
+
+Cancel
+
+</button>
+
+</div>
+
+
+
+
+
+</form>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+</div>
+
+
+
+
+<script type="module" src="js/leads.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Book Consultation
+
+</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/book.css">
+
+</head>
+
+<body>
+
+<div class="booking-page">
+
+<div class="booking-card">
+
+<div class="booking-logo">
+
+🦷
+
+</div>
+
+<h1 id="clinicName">
+
+Loading Clinic...
+
+</h1>
+
+<p>
+
+Book your consultation below and one of our
+team members will contact you shortly.
+
+</p>
+
+<form id="bookingForm">
+
+<input
+type="text"
+id="name"
+placeholder="Full Name"
+required>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required>
+
+<input
+type="email"
+id="email"
+placeholder="Email (Optional)">
+
+<select
+id="service"
+required>
+
+<option value="">
+
+Select Treatment
+
+</option>
+
+<option>
+
+Dental Cleaning
+
+</option>
+
+<option>
+
+Teeth Whitening
+
+</option>
+
+<option>
+
+Tooth Extraction
+
+</option>
+
+<option>
+
+Root Canal
+
+</option>
+
+<option>
+
+General Consultation
+
+</option>
+
+</select>
+
+<input
+type="date"
+id="preferredDate">
+
+<textarea
+id="notes"
+placeholder="Additional Notes">
+
+</textarea>
+
+<button
+type="submit">
+
+Book Consultation
+
+</button>
+
+</form>
+
+<div
+id="successMessage"
+class="hidden">
+
+✅ Thank you!
+
+<br><br>
+
+We've received your consultation request.
+
+Our team will contact you shortly to confirm your appointment.
+
+</div>
+
+<!-- ==========================
+     CLINIC LOCATION
+========================== -->
+
+<div class="clinic-location">
+
+<h2>
+📍 Find us easily using the map below or tap "Get Directions"
+</h2>
+
+<p id="clinicAddress">
+
+Loading address...
+
+</p>
+
+<div class="map-container">
+
+<iframe
+id="clinicMap"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<a
+id="directionsBtn"
+class="directions-btn"
+target="_blank">
+
+📍 Get Directions
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script
+type="module"
+src="js/book.js">
+
+</script>
+
+</body>
+
+</html>

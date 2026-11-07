@@ -1,0 +1,96 @@
+/* ==========================================
+   GROWTHFLOW DESIGN SYSTEM
+   KTM TECH
+   ========================================== */
+
+:root{
+
+    /* ==========================
+       BRAND COLORS
+    ========================== */
+
+    --primary:#10B981;
+    --primary-dark:#059669;
+    --primary-light:#D1FAE5;
+
+    --accent:#3B82F6;
+    --accent-light:#DBEAFE;
+
+    --success:#22C55E;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+
+    /* ==========================
+       BACKGROUND
+    ========================== */
+
+    --bg:#F8FAFC;
+    --surface:#FFFFFF;
+    --surface-hover:#F1F5F9;
+
+    /* ==========================
+       SIDEBAR
+    ========================== */
+
+    --sidebar:#111827;
+    --sidebar-hover:#1F2937;
+    --sidebar-active:#10B981;
+
+    /* ==========================
+       TEXT
+    ========================== */
+
+    --text:#0F172A;
+    --text-light:#64748B;
+    --text-white:#FFFFFF;
+
+    /* ==========================
+       BORDER
+    ========================== */
+
+    --border:#E2E8F0;
+
+    /* ==========================
+       BORDER RADIUS
+    ========================== */
+
+    --radius-xs:6px;
+    --radius-sm:10px;
+    --radius-md:16px;
+    --radius-lg:22px;
+    --radius-xl:30px;
+    --radius-round:999px;
+
+    /* ==========================
+       SHADOWS
+    ========================== */
+
+    --shadow-sm:0 2px 8px rgba(0,0,0,.05);
+    --shadow-md:0 8px 20px rgba(0,0,0,.08);
+    --shadow-lg:0 20px 40px rgba(0,0,0,.12);
+
+    /* ==========================
+       SPACING
+    ========================== */
+
+    --space-xs:.5rem;
+    --space-sm:1rem;
+    --space-md:1.5rem;
+    --space-lg:2rem;
+    --space-xl:3rem;
+
+    /* ==========================
+       TRANSITIONS
+    ========================== */
+
+    --transition:.3s ease;
+
+    /* ==========================
+       TYPOGRAPHY
+    ========================== */
+
+    --font-heading:"Poppins",sans-serif;
+    --font-body:"Inter",sans-serif;
+
+}
+

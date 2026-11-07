@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GrowthFlow | Pipeline</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/pipeline.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="logo-circle">
+                ↗
+            </div>
+
+            <h2>GrowthFlow</h2>
+
+        </div>
+
+        <nav>
+
+<a href="dashboard.html">
+🏠 Dashboard
+</a>
+
+<a href="leads.html">
+👥 Leads
+</a>
+
+<a href="pipeline.html" class="active">
+📊 Pipeline
+</a>
+
+<a href="followups.html">
+📅 Follow-ups
+</a>
+
+<a href="appointments.html">
+📅 Appointments
+</a>
+
+<a href="clients.html">
+🧑 Clients
+</a>
+
+<a href="settings.html">
+⚙ Settings
+</a>
+
+</nav>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Lead Pipeline</h1>
+
+                <p>
+                    Track every enquiry from first contact to converted patient.
+                </p>
+
+            </div>
+
+        </div>
+
+        <section class="pipeline">
+
+            <div class="pipeline-column">
+
+                <h3>
+🟡 New
+</h3>
+
+<p>
+<span id="newCount">
+0
+</span>
+Leads
+</p>
+
+                <div id="newLeads"></div>
+
+            </div>
+
+            <div class="pipeline-column">
+
+                <h3>🔵 Contacted</h3>
+
+                <p>
+<span id="contactedCount">
+0
+</span>
+Leads
+</p>
+
+                <div id="contactedLeads"></div>
+
+            </div>
+
+            <div class="pipeline-column">
+
+                <h3>🟠 Follow-up</h3>
+
+                <p>
+<span id="followUpCount">
+0
+</span>
+Leads
+</p>
+
+                <div id="followUpLeads"></div>
+
+            </div>
+
+            <div class="pipeline-column">
+
+                <h3>🟢 Booked</h3>
+
+                <p>
+<span id="bookedCount">
+0
+</span>
+Leads
+</p>
+
+                <div id="bookedLeads"></div>
+
+            </div>
+
+            <div class="pipeline-column">
+
+                <h3>✅ Converted</h3>
+
+                <p>
+<span id="convertedCount">
+0
+</span>
+Leads
+</p>
+
+                <div id="convertedLeads"></div>
+
+            </div>
+
+        </section>
+
+    <section class="source-analytics">
+
+
+<h2>
+📈 Lead Sources
+</h2>
+
+
+<div class="source-grid">
+
+
+<div class="source-card">
+
+<h3>
+Facebook
+</h3>
+
+<p id="facebookCount">
+0 Leads
+</p>
+
+</div>
+
+
+
+<div class="source-card">
+
+<h3>
+TikTok
+</h3>
+
+<p id="tiktokCount">
+0 Leads
+</p>
+
+</div>
+
+
+
+<div class="source-card">
+
+<h3>
+WhatsApp
+</h3>
+
+<p id="whatsappCount">
+0 Leads
+</p>
+
+</div>
+
+
+
+<div class="source-card">
+
+<h3>
+Referral
+</h3>
+
+<p id="referralCount">
+0 Leads
+</p>
+
+</div>
+
+
+
+<div class="source-card">
+
+<h3>
+Website
+</h3>
+
+<p id="websiteCount">
+0 Leads
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>    
+
+    </main>
+
+</div>
+
+<script type="module" src="js/pipeline.js"></script>
+
+</body>
+</html>

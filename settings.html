@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Settings | GrowthFlow
+</title>
+
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/settings.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+<aside class="sidebar">
+
+
+<div class="brand">
+
+<div class="logo-circle">
+↗
+</div>
+
+<h2>
+GrowthFlow
+</h2>
+
+</div>
+
+
+
+<nav>
+
+<a href="dashboard.html">
+🏠 Dashboard
+</a>
+
+
+<a href="leads.html">
+👥 Leads
+</a>
+
+
+<a href="pipeline.html">
+📊 Pipeline
+</a>
+
+
+<a href="followups.html">
+📅 Follow-ups
+</a>
+
+
+<a href="appointments.html">
+📅 Appointments
+</a>
+
+<a href="clients.html">
+🧑 Clients
+</a>
+
+<a href="settings.html" class="active">
+⚙ Settings
+</a>
+
+
+</nav>
+
+</aside>
+
+
+
+
+
+<main class="main">
+
+
+<header class="topbar">
+
+
+<div class="page-title">
+
+<h1>
+Settings
+</h1>
+
+
+<p>
+Manage your business information.
+</p>
+
+
+</div>
+
+
+</header>
+
+
+
+<section class="settings-card">
+
+
+<h2>
+Business Information
+</h2>
+
+
+<form id="settingsForm">
+
+
+<input
+type="text"
+id="businessNameInput"
+placeholder="Business Name"
+required>
+
+<input
+type="text"
+id="ownerNameInput"
+placeholder="Owner Name">
+
+<input
+type="text"
+id="phoneInput"
+placeholder="Phone Number">
+
+
+<input
+type="email"
+id="emailInput"
+placeholder="Email">
+
+
+<textarea
+id="addressInput"
+placeholder="Business Address">
+</textarea>
+
+
+
+<button
+class="btn btn-primary"
+type="submit">
+
+Save Changes
+
+</button>
+
+
+</form>
+
+
+</section>
+
+
+<section class="card marketing-card">
+
+<h2>
+Marketing Channels
+</h2>
+
+<p>
+Use these links on your social media and website to collect patient enquiries automatically.
+</p>
+
+
+<div class="channel-grid">
+
+
+<!-- Facebook -->
+
+<div class="channel-card">
+
+<h3>
+📘 Facebook
+</h3>
+
+<p>
+Facebook patient enquiries
+</p>
+
+<input 
+id="facebookLink"
+readonly>
+
+
+<div class="channel-actions">
+
+<button 
+class="btn btn-primary copyBtn"
+data-link="facebookLink">
+
+Copy Link
+
+</button>
+
+
+<button
+class="btn btn-secondary testBtn"
+data-link="facebookLink">
+
+Test
+
+</button>
+
+<div id="facebookQR" class="qr-box"></div>
+
+
+<button
+class="btn btn-secondary qrBtn"
+data-link="facebookLink"
+data-qr="facebookQR">
+
+Generate QR
+
+</button>
+
+
+<div class="qr-actions hidden" id="facebookActions">
+
+<button
+class="qr-small-btn downloadQRBtn"
+data-qr="facebookQR">
+
+⬇ Download
+
+</button>
+
+
+<button
+class="qr-small-btn printQRBtn"
+data-qr="facebookQR">
+
+🖨 Print
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- Instagram -->
+
+<div class="channel-card">
+
+<h3>
+📸 Instagram
+</h3>
+
+<p>
+Instagram patient enquiries
+</p>
+
+
+<input 
+id="instagramLink"
+readonly>
+
+
+<div class="channel-actions">
+
+<button 
+class="btn btn-primary copyBtn"
+data-link="instagramLink">
+
+Copy Link
+
+</button>
+
+
+<button
+class="btn btn-secondary testBtn"
+data-link="instagramLink">
+
+Test
+
+</button>
+
+<div id="instagramQR" class="qr-box"></div>
+
+
+<button
+class="btn btn-secondary qrBtn"
+data-link="instagramLink"
+data-qr="instagramQR">
+
+Generate QR
+
+</button>
+
+
+<div class="qr-actions hidden" id="instagramActions">
+
+<button
+class="qr-small-btn downloadQRBtn"
+data-qr="instagramQR">
+
+⬇ Download
+
+</button>
+
+
+<button
+class="qr-small-btn printQRBtn"
+data-qr="instagramQR">
+
+🖨 Print
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- WhatsApp -->
+
+<div class="channel-card">
+
+<h3>
+💬 WhatsApp
+</h3>
+
+<p>
+WhatsApp enquiries
+</p>
+
+
+<input 
+id="whatsappLink"
+readonly>
+
+
+<div class="channel-actions">
+
+<button 
+class="btn btn-primary copyBtn"
+data-link="whatsappLink">
+
+Copy Link
+
+</button>
+
+
+<button
+class="btn btn-secondary testBtn"
+data-link="whatsappLink">
+
+Test
+
+</button>
+
+<div id="whatsappQR" class="qr-box"></div>
+
+
+<button
+class="btn btn-secondary qrBtn"
+data-link="whatsappLink"
+data-qr="whatsappQR">
+
+Generate QR
+
+</button>
+
+
+<div class="qr-actions hidden" id="whatsappActions">
+
+<button
+class="qr-small-btn downloadQRBtn"
+data-qr="whatsappQR">
+
+⬇ Download
+
+</button>
+
+
+<button
+class="qr-small-btn printQRBtn"
+data-qr="whatsappQR">
+
+🖨 Print
+
+</button>
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
+<!-- Website -->
+
+<div class="channel-card">
+
+<h3>
+🌐 Website
+</h3>
+
+<p>
+Website booking form
+</p>
+
+
+<input 
+id="websiteLink"
+readonly>
+
+
+<div class="channel-actions">
+
+<button 
+class="btn btn-primary copyBtn"
+data-link="websiteLink">
+
+Copy Link
+
+</button>
+
+
+<button
+class="btn btn-secondary testBtn"
+data-link="websiteLink">
+
+Test
+
+</button>
+
+<div id="websiteQR" class="qr-box"></div>
+
+
+<button
+class="btn btn-secondary qrBtn"
+data-link="websiteLink"
+data-qr="websiteQR">
+
+Generate QR
+
+</button>
+
+
+<div class="qr-actions hidden" id="websiteActions">
+
+<button
+class="qr-small-btn downloadQRBtn"
+data-qr="websiteQR">
+
+⬇ Download
+
+</button>
+
+
+<button
+class="qr-small-btn printQRBtn"
+data-qr="websiteQR">
+
+🖨 Print
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script type="module" src="js/settings.js"></script>
+
+
+</body>
+
+</html>

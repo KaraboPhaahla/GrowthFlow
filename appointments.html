@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Appointments | GrowthFlow
+</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/appointments.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- ==========================
+     SIDEBAR
+========================== -->
+
+<aside class="sidebar">
+
+<div class="brand">
+
+<div class="logo-circle">
+↗
+</div>
+
+<h2>
+GrowthFlow
+</h2>
+
+</div>
+
+<nav>
+
+<a href="dashboard.html">
+🏠 Dashboard
+</a>
+
+<a href="leads.html">
+👥 Leads
+</a>
+
+<a href="pipeline.html">
+📊 Pipeline
+</a>
+
+<a href="followups.html">
+📅 Follow-ups
+</a>
+
+<a href="appointments.html" class="active">
+📅 Appointments
+</a>
+
+<a href="clients.html">
+🧑 Clients
+</a>
+
+<a href="settings.html">
+⚙ Settings
+</a>
+
+</nav>
+
+
+</aside>
+
+<!-- ==========================
+     MAIN CONTENT
+========================== -->
+
+<main class="main">
+
+<header class="topbar">
+
+<div class="page-title">
+
+<h1>
+Appointments
+</h1>
+
+<p>
+Manage your clinic schedule.
+</p>
+
+</div>
+
+<button
+class="btn btn-primary"
+id="newAppointmentBtn">
+
++ New Appointment
+
+</button>
+
+</header>
+
+<!-- ==========================
+     TODAY
+========================== -->
+
+<section class="appointments-section">
+
+<h2>
+Today's Appointments
+</h2>
+
+<div
+class="appointments-container"
+id="todayAppointments">
+
+<div class="empty-state">
+
+No appointments scheduled for today.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+     UPCOMING
+========================== -->
+
+<section class="appointments-section">
+
+<h2>
+Upcoming Appointments
+</h2>
+
+<div
+class="appointments-container"
+id="upcomingAppointments">
+
+<div class="empty-state">
+
+No upcoming appointments.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+     MISSED
+========================== -->
+
+<section class="appointments-section">
+
+<h2>
+⚠ Missed Appointments
+</h2>
+
+<div
+class="appointments-container"
+id="missedAppointments">
+
+<div class="empty-state">
+
+No missed appointments.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+     NEW APPOINTMENT MODAL
+========================== -->
+
+<div
+class="modal hidden"
+id="appointmentModal">
+
+<div class="modal-content">
+
+<h2 id="appointmentTitle">
+
+New Appointment
+
+</h2>
+
+<form id="appointmentForm">
+
+<input
+type="text"
+id="patientName"
+placeholder="Patient Name"
+required>
+
+<input
+type="text"
+id="service"
+placeholder="Treatment / Service"
+required>
+
+<input
+type="text"
+id="dentist"
+placeholder="Dentist">
+
+<input
+type="date"
+id="appointmentDate"
+required>
+
+<input
+type="time"
+id="appointmentTime"
+required>
+
+<input
+type="number"
+id="duration"
+placeholder="Duration (minutes)">
+
+<textarea
+id="notes"
+placeholder="Notes"></textarea>
+
+<div class="modal-buttons">
+
+<button
+type="submit"
+class="btn btn-primary">
+
+Save Appointment
+
+</button>
+
+<button
+type="button"
+class="btn btn-secondary"
+id="cancelAppointment">
+
+Cancel
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<script type="module" src="js/appointments.js"></script>
+
+</body>
+
+</html>

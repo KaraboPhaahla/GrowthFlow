@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Client Records | GrowthFlow</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/clients.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<div class="brand">
+
+<div class="logo-circle">
+↗
+</div>
+
+<h2>
+GrowthFlow
+</h2>
+
+</div>
+
+<nav>
+
+<a href="dashboard.html">
+🏠 Dashboard
+</a>
+
+<a href="leads.html">
+👥 Leads
+</a>
+
+<a href="pipeline.html">
+📊 Pipeline
+</a>
+
+<a href="followups.html">
+📅 Follow-ups
+</a>
+
+<a href="appointments.html">
+📅 Appointments
+</a>
+
+<a href="clients.html" class="active">
+🧑 Clients
+</a>
+
+<a href="settings.html">
+⚙ Settings
+</a>
+
+</nav>
+
+</aside>
+
+<!-- MAIN -->
+
+<main class="main">
+
+<header class="topbar">
+
+<div class="page-title">
+
+<h1>
+Client Records
+</h1>
+
+<p>
+Converted patients are stored here.
+</p>
+
+</div>
+
+</header>
+
+<div class="clients-header">
+
+<h2 id="clientCount">
+
+Total Clients: 0
+
+</h2>
+
+</div>
+
+<input
+type="text"
+id="searchClient"
+placeholder="Search by name, phone or service...">
+
+<table class="clients-table">
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Phone</th>
+
+<th>Service</th>
+
+<th>Source</th>
+
+<th>Date</th>
+
+</tr>
+
+</thead>
+
+<tbody id="clientsTableBody">
+
+</tbody>
+
+</table>
+
+</main>
+
+</div>
+
+<script type="module" src="js/clients.js"></script>
+
+</body>
+</html>
