@@ -58,7 +58,12 @@ onAuthStateChanged(auth, async(user)=>{
 
     loadSettings();
 
-    const baseURL = window.location.origin;
+    const baseURL =
+window.location.origin +
+window.location.pathname.substring(
+    0,
+    window.location.pathname.lastIndexOf("/")
+);
 
     document.getElementById("facebookLink").value =
     `${baseURL}/book.html?business=${user.uid}&source=Facebook`;
