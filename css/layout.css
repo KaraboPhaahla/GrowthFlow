@@ -17,24 +17,19 @@
 .sidebar{
 
     width:280px;
-
     background:var(--sidebar);
-
     color:white;
-
     position:fixed;
-
     top:0;
-
     left:0;
-
     height:100vh;
 
     display:flex;
-
     flex-direction:column;
 
     padding:30px;
+
+    overflow-y:auto;
 
 }
 
