@@ -3,7 +3,10 @@ import { auth, db } from "./firebase.js";
 
 import {
 onAuthStateChanged,
-signOut
+signOut,
+EmailAuthProvider,
+reauthenticateWithCredential,
+verifyBeforeUpdateEmail
 }
 from
 "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
@@ -34,13 +37,16 @@ document.getElementById("phoneInput");
 const emailInput =
 document.getElementById("emailInput");
 
+const currentPassword =
+document.getElementById("currentPassword");
 
 const addressInput =
 document.getElementById("addressInput");
 
 
+    let businessID;
 
-let businessID;
+    let currentUser;
 
 
 
@@ -53,6 +59,8 @@ onAuthStateChanged(auth, async(user)=>{
         return;
 
     }
+
+    currentUser = user;
 
     businessID = user.uid;
 
@@ -123,56 +131,108 @@ data.address || "";
 
 }
 
+currentPassword.value = "";
 
+}
+
+
+
+async function verifyPassword(user){
+
+
+if(!currentPassword.value){
+
+    throw new Error(
+    "Please enter your current password"
+    );
 
 }
 
 
-
-form.addEventListener("submit",async(e)=>{
-
-
-e.preventDefault();
+const password =
+currentPassword.value;
 
 
-
-await updateDoc(
-
-doc(
-db,
-"businesses",
-businessID
-),
-
-{
-
-businessName:
-businessNameInput.value,
+const credential =
+EmailAuthProvider.credential(
+    user.email,
+    password
+);
 
 
-ownerName:
-ownerNameInput.value,
-
-
-phone:
-phoneInput.value,
-
-
-email:
-emailInput.value,
-
-
-address:
-addressInput.value
-
-}
-
+await reauthenticateWithCredential(
+    user,
+    credential
 );
 
 
 
-alert("Settings updated successfully");
+}
 
+
+
+form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    try{
+
+        // Verify password
+        await verifyPassword(currentUser);
+
+        const oldEmail = currentUser.email;
+        const newEmail = emailInput.value.trim();
+
+        // If email changed, send verification email
+        if(newEmail !== oldEmail){
+
+            await verifyBeforeUpdateEmail(
+                currentUser,
+                newEmail
+            );
+
+            alert(
+                "A verification email has been sent to your new email.\n\nPlease verify it before using the new email to log in."
+            );
+
+        }
+
+        // Save profile information
+        await updateDoc(
+
+            doc(db,"businesses",businessID),
+
+            {
+
+                businessName: businessNameInput.value,
+
+                ownerName: ownerNameInput.value,
+
+                phone: phoneInput.value,
+
+                email: emailInput.value,
+
+                address: addressInput.value
+
+            }
+
+        );
+
+        currentPassword.value = "";
+
+        if(newEmail === oldEmail){
+
+            alert("Settings updated successfully.");
+
+        }
+
+    }
+
+    catch(error){
+
+        alert(error.message);
+
+    }
 
 });
 
@@ -188,7 +248,7 @@ if(logoutBtn){
 
         await signOut(auth);
 
-        window.location="login.html";
+        window.location = "index.html";
 
     });
 
