@@ -50,7 +50,7 @@ let sources = {
 onAuthStateChanged(auth, async (user) => {
 
     if (!user) {
-        window.location = "login.html";
+        window.location = "index.html";
         return;
     }
 
