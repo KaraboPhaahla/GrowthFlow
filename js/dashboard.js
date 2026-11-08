@@ -151,7 +151,7 @@ logoutBtn.addEventListener("click",async()=>{
 await signOut(auth);
 
 
-window.location="login.html";
+window.location = "index.html";
 
 
 });
